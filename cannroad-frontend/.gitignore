@@ -6,9 +6,7 @@ node_modules/
 # Testing
 coverage/
 
-# Production build
-dist/
-dist-ssr/
+# Production build/
 build/
 
 # Environment (mantener .env.example en git, no .env con secrets reales)
