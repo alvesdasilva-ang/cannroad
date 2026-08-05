@@ -1,0 +1,9 @@
+NODE_ENV=development
+PORT=3000
+DB_HOST=postgres
+DB_PORT=5432
+DB_USER=cannroad_user
+DB_PASSWORD=cannroad_pass
+DB_NAME=cannroad_db
+JWT_SECRET=your_jwt_secret_change_in_production_12345
+CORS_ORIGIN=*

@@ -1,0 +1,20 @@
+{
+  "name": "cannroad-finished",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.3.0"
+  }
+}
