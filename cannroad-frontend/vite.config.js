@@ -6,6 +6,10 @@ import path from 'path';
 // Preparada para desarrollo local + deploy a Cloudflare Pages
 export default defineConfig({
     plugins: [react()],
+
+    // GitHub Pages sirve el sitio en https://<usuario>.github.io/cannroad/
+    // por eso las rutas de assets deben ser relativas a /cannroad/ y no a la raíz.
+    base: '/cannroad/',
     
     // Alias para imports limpios (ej: import x from '@/components/GlassPanel')
     resolve: {

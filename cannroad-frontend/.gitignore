@@ -6,8 +6,9 @@ node_modules/
 # Testing
 coverage/
 
-# Production build/
+# Production
 build/
+dist/
 
 # Environment (mantener .env.example en git, no .env con secrets reales)
 .env.local
