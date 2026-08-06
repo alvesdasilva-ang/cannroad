@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-primary: #10b981;
+    --color-primary-light: #d1fae5;
+    --color-bg: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #6b7280;
+    --color-card: rgba(255, 255, 255, 0.7);
+    --color-card-border: rgba(16, 185, 129, 0.2);
+    --glass-blur: 20px;
+}
+
+@layer base {
+    html {
+        font-family: 'Inter', system-ui, sans-serif;
+        color: var(--color-text);
+        background-color: var(--color-bg);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        min-height: 100vh;
+        background-color: white;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+    }
+
+    code, pre {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(16, 185, 129, 0.2); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(16, 185, 129, 0.4); }
+}
+
+@layer components {
+
+    /* ============================================================
+       GLASS PANEL — Real glassmorphism según Figma
+    ============================================================ */
+    .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(var(--glass-blur));
+        -webkit-backdrop-filter: blur(var(--glass-blur));
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 1rem;
+        box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.05),
+            0 1px 2px rgba(0, 0, 0, 0.04),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Refraction highlight layer (del Figma) */
+    .glass-panel::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        opacity: 0.5;
+        mix-blend-mode: overlay;
+        pointer-events: none;
+    }
+
+    .glass-panel-hover {
+    @apply transition-all duration-200 cursor-pointer;
+}
+
+.glass-panel-hover:hover {
+    box-shadow:
+        0 12px 40px rgba(16, 185, 129, 0.12),
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border-color: rgba(16, 185, 129, 0.35);
+    transform: translateY(-1px);
+}
+
+    /* ============================================================
+       NAVBAR — Floating pill según Figma
+    ============================================================ */
+    .nav-floating {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 9999px;
+        box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.06),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    /* Tab indicator animado (del Figma) */
+    .nav-tab-indicator {
+        background: white;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 9999px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                    width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 0.2s ease;
+    }
+
+    /* ============================================================
+       BOTONES
+    ============================================================ */
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2;
+        @apply bg-emerald-500 text-white px-5 py-2.5 rounded-full;
+        @apply text-sm font-medium;
+        @apply hover:bg-emerald-600 active:bg-emerald-700;
+        @apply transition-all duration-200;
+        @apply shadow-sm hover:shadow-md;
+        @apply focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2;
+        @apply bg-emerald-50 text-emerald-700 px-5 py-2.5 rounded-full;
+        @apply text-sm font-medium border border-emerald-200;
+        @apply hover:bg-emerald-100 active:bg-emerald-200;
+        @apply transition-all duration-200;
+        @apply focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-2;
+        @apply bg-transparent text-gray-600 px-5 py-2.5 rounded-full;
+        @apply text-sm font-medium border border-gray-200;
+        @apply hover:bg-gray-50 hover:border-gray-300 active:bg-gray-100;
+        @apply transition-all duration-200;
+        @apply focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2;
+    }
+
+    /* ============================================================
+       INPUTS
+    ============================================================ */
+    .input-base {
+        @apply w-full px-4 py-2.5 rounded-xl;
+        @apply bg-white border border-gray-200 text-gray-800;
+        @apply placeholder:text-gray-400 text-sm;
+        @apply focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20;
+        @apply transition-all duration-200;
+    }
+
+    .label-base {
+        @apply block text-sm font-medium text-gray-700 mb-1.5;
+    }
+
+    /* ============================================================
+       CARDS DE PROCESO — Estilo Figma: bg-white, border emerald
+    ============================================================ */
+    .process-card {
+        @apply w-full bg-white rounded-xl p-6;
+        @apply flex items-center justify-between;
+        @apply border border-emerald-100/50;
+        @apply hover:shadow-md hover:border-emerald-200;
+        @apply transition-all duration-200 cursor-pointer;
+    }
+
+    /* ============================================================
+       BADGES
+    ============================================================ */
+    .badge {
+        @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border;
+    }
+    .badge-success {
+        @apply bg-emerald-500/10 border-emerald-500/20 text-emerald-700;
+    }
+    .badge-warning {
+        @apply bg-amber-500/10 border-amber-500/20 text-amber-700;
+    }
+    .badge-error {
+        @apply bg-red-500/10 border-red-500/20 text-red-600;
+    }
+    .badge-neutral {
+        @apply bg-white/5 border-white/10 text-gray-500;
+    }
+
+    /* ============================================================
+       MAIN CONTENT AREA — según Figma
+    ============================================================ */
+    .content-area {
+        @apply flex-1 bg-emerald-50/40 rounded-[2rem];
+        @apply border border-emerald-100 shadow-sm;
+        @apply p-8 flex flex-col;
+        @apply min-h-0;
+    }
+}
+
+@layer utilities {
+    /* Ambient lighting (del Figma - background blur orbs) */
+    .ambient-top {
+        position: absolute;
+        top: -20%;
+        left: -10%;
+        width: 60%;
+        height: 60%;
+        border-radius: 9999px;
+        background: rgba(167, 243, 208, 0.5);
+        filter: blur(120px);
+        pointer-events: none;
+    }
+
+    .ambient-bottom {
+        position: absolute;
+        bottom: -10%;
+        right: -10%;
+        width: 50%;
+        height: 50%;
+        border-radius: 9999px;
+        background: rgba(20, 184, 166, 0.3);
+        filter: blur(120px);
+        pointer-events: none;
+    }
+}
