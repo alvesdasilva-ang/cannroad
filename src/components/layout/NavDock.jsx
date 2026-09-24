@@ -6,6 +6,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '@/hooks/useAuth';
+import SearchBar from '@/components/SearchBar';
 
 const TABS = [
     {
@@ -118,6 +119,11 @@ export function NavDock({ onFilterChange }) {
                         </button>
                     ))}
                 </nav>
+
+                {/* Barra de búsqueda */}
+                <div className="flex-1 flex justify-center px-4">
+                    <SearchBar />
+                </div>
 
                 {/* Avatar con dropdown + logout */}
                 <div className="flex items-center gap-3">
