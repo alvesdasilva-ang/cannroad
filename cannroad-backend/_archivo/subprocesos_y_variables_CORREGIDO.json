@@ -1,0 +1,5474 @@
+{
+  "procesos": [
+    {
+      "id": 1,
+      "nombre": "Planta Madre",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-001",
+          "nombre": "Calibración de Riego",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-PL-02",
+          "descripcion": "Calibración de disparos de riego automático por Planta Madre.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de calibración",
+              "orden": 1
+            },
+            {
+              "nombre": "PM N°",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador de la Planta Madre (PM N°1 a N°12)",
+              "orden": 2
+            },
+            {
+              "nombre": "Disparo N°",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+              ],
+              "descripcion": "Número de disparo de riego automático",
+              "orden": 3
+            },
+            {
+              "nombre": "Tiempo Disparo",
+              "tipo_dato": "numero",
+              "unidad": "min",
+              "rango_min": 0,
+              "rango_max": 60,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Duración del disparo",
+              "orden": 4
+            },
+            {
+              "nombre": "ml Aplicados",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 5000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Volumen aplicado en el disparo",
+              "orden": 5
+            },
+            {
+              "nombre": "Tiempo de Testigo",
+              "tipo_dato": "numero",
+              "unidad": "min",
+              "rango_min": 0,
+              "rango_max": 60,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Minutos de testigo del riego automático según estacas",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas de calibración",
+              "orden": 7
+            }
+          ]
+        },
+        {
+          "id": "SP-002",
+          "nombre": "Control de Clones",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0202",
+          "descripcion": "Registro de corte de clones desde plantas madre.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de corte de clones",
+              "orden": 1
+            },
+            {
+              "nombre": "N° Lote Planta Madre",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Lote de la planta madre de origen",
+              "orden": 2
+            },
+            {
+              "nombre": "Cantidad de Clones Cortados",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 2000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Clones cortados en la jornada",
+              "orden": 3
+            },
+            {
+              "nombre": "N° de Camada Asignado",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada a la que se asignan los clones",
+              "orden": 4
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas",
+              "orden": 5
+            }
+          ]
+        },
+        {
+          "id": "SP-003",
+          "nombre": "Labores Culturales",
+          "orden": 3,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-PG-XX",
+          "descripcion": "Labores culturales de mantenimiento de plantas.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la labor",
+              "orden": 1
+            },
+            {
+              "nombre": "N° Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Lote intervenido",
+              "orden": 2
+            },
+            {
+              "nombre": "Poda de Limpieza",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se realizó poda de limpieza",
+              "orden": 3
+            },
+            {
+              "nombre": "Poda de Formación",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se realizó poda de formación",
+              "orden": 4
+            },
+            {
+              "nombre": "Colocación de Trampa",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se colocó trampa fitosanitaria",
+              "orden": 5
+            },
+            {
+              "nombre": "Colocación de Red",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se colocó red de sostén",
+              "orden": 6
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Quién ejecuta la labor",
+              "orden": 7
+            },
+            {
+              "nombre": "Indicado por",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Quién indicó la labor",
+              "orden": 8
+            }
+          ]
+        },
+        {
+          "id": "SP-004",
+          "nombre": "Registro de Escorrentía y Condiciones Ambientales",
+          "orden": 4,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0101",
+          "descripcion": "Medición diaria de escurrimiento (pH/EC) y condiciones ambientales (T°, HR, VPD, CO2, ventilación) de Sala Plantas Madres. Rango real observado en CM-RE-0101: Humedad 28.8-53%+, Temperatura 15-19.4°C, VPD 0.03-0.4+ kPa, CO2 100-1134+ ppm — más amplio que el estándar v3.0.",
+          "variables": [
+            {
+              "nombre": "Fecha Última Medición",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Fecha de la medición anterior",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha Actual",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la medición actual",
+              "orden": 2
+            },
+            {
+              "nombre": "ID Planta",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador de planta madre (PM.1 a PM.12)",
+              "orden": 3
+            },
+            {
+              "nombre": "ML Escurrimiento (1ra Medición)",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 2000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Mililitros de escurrimiento",
+              "orden": 4
+            },
+            {
+              "nombre": "pH Escurrimiento (1ra Medición)",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 14,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "pH del escurrimiento",
+              "orden": 5
+            },
+            {
+              "nombre": "EC Escurrimiento (1ra Medición)",
+              "tipo_dato": "numero",
+              "unidad": "mS/cm",
+              "rango_min": 0,
+              "rango_max": 10,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Conductividad eléctrica del escurrimiento",
+              "orden": 6
+            },
+            {
+              "nombre": "ML Corrección",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 2000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Mililitros aplicados en corrección",
+              "orden": 7
+            },
+            {
+              "nombre": "pH Corrección",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 14,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "pH tras corrección",
+              "orden": 8
+            },
+            {
+              "nombre": "EC Corrección",
+              "tipo_dato": "numero",
+              "unidad": "mS/cm",
+              "rango_min": 0,
+              "rango_max": 10,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "EC tras corrección",
+              "orden": 9
+            },
+            {
+              "nombre": "pH Riego",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 14,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "pH de la solución de riego",
+              "orden": 10
+            },
+            {
+              "nombre": "EC Riego",
+              "tipo_dato": "numero",
+              "unidad": "mS/cm",
+              "rango_min": 0,
+              "rango_max": 10,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "EC de la solución de riego",
+              "orden": 11
+            },
+            {
+              "nombre": "Notas",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Observaciones de la medición",
+              "orden": 12
+            },
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 30,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de cultivo/almacenamiento",
+              "orden": 13
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 40,
+              "rango_max": 80,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 14
+            },
+            {
+              "nombre": "VPD",
+              "tipo_dato": "numero",
+              "unidad": "kPa",
+              "rango_min": 0.8,
+              "rango_max": 2.0,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Vapor Pressure Deficit (déficit de presión de vapor)",
+              "orden": 15
+            },
+            {
+              "nombre": "CO2",
+              "tipo_dato": "numero",
+              "unidad": "ppm",
+              "rango_min": 400,
+              "rango_max": 1500,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Concentración de CO2 ambiente",
+              "orden": 16
+            },
+            {
+              "nombre": "Ventilación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Baja",
+                "Media",
+                "Alta"
+              ],
+              "descripcion": "Nivel de ventilación aplicado en la sala",
+              "orden": 17
+            }
+          ]
+        },
+        {
+          "id": "SP-005",
+          "nombre": "Disposición Final",
+          "orden": 5,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-PL-01",
+          "descripcion": "Registro de disposición final de material vegetal descartado.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de disposición final",
+              "orden": 1
+            },
+            {
+              "nombre": "ID Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador del lote dispuesto",
+              "orden": 2
+            },
+            {
+              "nombre": "Encargado de Disposición Final",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable de la disposición",
+              "orden": 3
+            },
+            {
+              "nombre": "Destino",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Compost",
+                "Residuos Comunes",
+                "Otros"
+              ],
+              "descripcion": "Destino final del material",
+              "orden": 4
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales",
+              "orden": 5
+            }
+          ]
+        },
+        {
+          "id": "SP-006",
+          "nombre": "Aplicación de Agroquímicos",
+          "orden": 6,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0504",
+          "descripcion": "Registro de aplicación de fitosanitarios/agroquímicos en Planta Madre.",
+          "variables": [
+            {
+              "nombre": "Fecha de Aplicación",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de aplicación del producto",
+              "orden": 1
+            },
+            {
+              "nombre": "ID de Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Lote tratado",
+              "orden": 2
+            },
+            {
+              "nombre": "Variedad",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Pete Hope",
+                "Otros"
+              ],
+              "descripcion": "Variedad/cepa tratada",
+              "orden": 3
+            },
+            {
+              "nombre": "Ubicación de Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Ubicación física del lote",
+              "orden": 4
+            },
+            {
+              "nombre": "Objetivo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Objetivo de la aplicación (plaga/enfermedad objetivo)",
+              "orden": 5
+            },
+            {
+              "nombre": "Nombre Comercial del Producto Aplicado",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Producto comercial utilizado",
+              "orden": 6
+            },
+            {
+              "nombre": "Ingrediente Activo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Ingrediente activo del producto",
+              "orden": 7
+            },
+            {
+              "nombre": "Dosis",
+              "tipo_dato": "numero",
+              "unidad": "ml/100L",
+              "rango_min": 0,
+              "rango_max": 1000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Dosis aplicada",
+              "orden": 8
+            },
+            {
+              "nombre": "Condiciones Ambientales",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Condiciones ambientales durante la aplicación",
+              "orden": 9
+            },
+            {
+              "nombre": "Equipo Utilizado para la Aplicación",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Equipo de aplicación",
+              "orden": 10
+            },
+            {
+              "nombre": "Carencia",
+              "tipo_dato": "numero",
+              "unidad": "días",
+              "rango_min": 0,
+              "rango_max": 90,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Días de carencia del producto",
+              "orden": 11
+            },
+            {
+              "nombre": "Nombre del Operario",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Operario que aplica",
+              "orden": 12
+            },
+            {
+              "nombre": "Asesor que Recomendó la Aplicación",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Asesor técnico/agrónomo",
+              "orden": 13
+            }
+          ]
+        },
+        {
+          "id": "SP-007",
+          "nombre": "Mantenimiento de Equipos de Climatización y Ambiente",
+          "orden": 7,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Registro de mantenimiento de Aires Acondicionados, Ventiladores, Deshumidificadores y Humidificadores en Planta Madre. Fuente: cuaderno de campo.",
+          "variables": [
+            {
+              "nombre": "Tipo de Equipo",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aire Acondicionado",
+                "Ventilador",
+                "Deshumidificador",
+                "Humidificador"
+              ],
+              "descripcion": "Categoría de equipo de climatización intervenido",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la actividad de mantenimiento",
+              "orden": 2
+            },
+            {
+              "nombre": "Equipo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación/código del equipo",
+              "orden": 3
+            },
+            {
+              "nombre": "Estado",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Operativo",
+                "Fuera de Servicio",
+                "En Mantenimiento"
+              ],
+              "descripcion": "Estado operativo del equipo",
+              "orden": 4
+            },
+            {
+              "nombre": "Actividad Realizada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Descripción de la actividad de mantenimiento realizada",
+              "orden": 5
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Persona que realizó el mantenimiento (si distinto al responsable habitual)",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales; consignar nombre y motivo si el mantenimiento lo realizó alguien distinto al responsable habitual",
+              "orden": 7
+            }
+          ]
+        },
+        {
+          "id": "SP-008",
+          "nombre": "Historial de Plantas Madres",
+          "orden": 8,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0201",
+          "descripcion": "Trazabilidad y genealogía histórica de plantas madre.",
+          "variables": [
+            {
+              "nombre": "Código ID",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Código único de la planta madre",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha de Inicio",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de alta de la planta madre",
+              "orden": 2
+            },
+            {
+              "nombre": "Fecha de Baja",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Fecha de baja (o 'Vigentes')",
+              "orden": 3
+            },
+            {
+              "nombre": "Sistema",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "COCO",
+                "RDWC",
+                "Otros"
+              ],
+              "descripcion": "Sistema de producción",
+              "orden": 4
+            },
+            {
+              "nombre": "Nº Clonación que da origen PM",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Clon de origen",
+              "orden": 5
+            },
+            {
+              "nombre": "ID Madre que da Origen",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Planta madre progenitora (o 'Inicial')",
+              "orden": 6
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Camada asociada",
+              "orden": 7
+            },
+            {
+              "nombre": "Esquema de Clonación Relacionado",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Esquema/relación de clonación",
+              "orden": 8
+            }
+          ]
+        },
+        {
+          "id": "SP-009",
+          "nombre": "Registro de Observaciones",
+          "orden": 9,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Bitácora de observaciones libres de sala.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la observación",
+              "orden": 1
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Texto libre de observaciones de sala",
+              "orden": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Clonación",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-010",
+          "nombre": "HPAC",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0202",
+          "descripcion": "Registro de clones en sistema HPAC.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de registro",
+              "orden": 1
+            },
+            {
+              "nombre": "HPAC N°",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "descripcion": "Número de unidad HPAC",
+              "orden": 2
+            },
+            {
+              "nombre": "Planta Madre",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Planta madre de origen",
+              "orden": 3
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada de los clones",
+              "orden": 4
+            },
+            {
+              "nombre": "Cantidad de Clones",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 2000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Clones colocados",
+              "orden": 5
+            },
+            {
+              "nombre": "Descarte",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 2000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Clones descartados",
+              "orden": 6
+            }
+          ]
+        },
+        {
+          "id": "SP-011",
+          "nombre": "JIFFY",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0202",
+          "descripcion": "Registro de clones en sistema JIFFY.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de registro",
+              "orden": 1
+            },
+            {
+              "nombre": "Bandejas",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 200,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cantidad de bandejas JIFFY",
+              "orden": 2
+            },
+            {
+              "nombre": "N° PM",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Planta madre de origen",
+              "orden": 3
+            },
+            {
+              "nombre": "Cantidad de Clones",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 2000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Clones colocados en JIFFY",
+              "orden": 4
+            },
+            {
+              "nombre": "Descarte",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 2000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Clones descartados",
+              "orden": 5
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas",
+              "orden": 6
+            }
+          ]
+        },
+        {
+          "id": "SP-012",
+          "nombre": "Condiciones Ambientales de Clonación",
+          "orden": 3,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0102",
+          "descripcion": "No presente como planilla dedicada en el cuaderno de campo de Clonación (solo aparece Mantenimiento de Equipos); la Matriz Consolidada lista el registro CM-RE-0102 'Condiciones Ambientales y Seguimiento Clonación' como obligatorio (G01). Se agrega por regla de climatización — variable agregada desde Matriz, ausente del cuaderno.",
+          "variables": [
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 30,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de cultivo/almacenamiento",
+              "orden": 1
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 40,
+              "rango_max": 80,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 2
+            },
+            {
+              "nombre": "VPD",
+              "tipo_dato": "numero",
+              "unidad": "kPa",
+              "rango_min": 0.8,
+              "rango_max": 2.0,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Vapor Pressure Deficit (déficit de presión de vapor)",
+              "orden": 3
+            },
+            {
+              "nombre": "CO2",
+              "tipo_dato": "numero",
+              "unidad": "ppm",
+              "rango_min": 400,
+              "rango_max": 1500,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Concentración de CO2 ambiente",
+              "orden": 4
+            },
+            {
+              "nombre": "Ventilación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Baja",
+                "Media",
+                "Alta"
+              ],
+              "descripcion": "Nivel de ventilación aplicado en la sala",
+              "orden": 5
+            }
+          ]
+        },
+        {
+          "id": "SP-013",
+          "nombre": "Disposición Final",
+          "orden": 4,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-PL-01",
+          "descripcion": "Registro de disposición final de material vegetal descartado.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de disposición final",
+              "orden": 1
+            },
+            {
+              "nombre": "ID Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador del lote dispuesto",
+              "orden": 2
+            },
+            {
+              "nombre": "Encargado de Disposición Final",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable de la disposición",
+              "orden": 3
+            },
+            {
+              "nombre": "Destino",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Compost",
+                "Residuos Comunes",
+                "Otros"
+              ],
+              "descripcion": "Destino final del material",
+              "orden": 4
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales",
+              "orden": 5
+            }
+          ]
+        },
+        {
+          "id": "SP-014",
+          "nombre": "Registro de Observaciones",
+          "orden": 5,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Bitácora de observaciones libres de sala.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la observación",
+              "orden": 1
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Texto libre de observaciones de sala",
+              "orden": 2
+            }
+          ]
+        },
+        {
+          "id": "SP-015",
+          "nombre": "Mantenimiento de Equipos de Climatización y Ambiente",
+          "orden": 6,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Registro de mantenimiento de Aires Acondicionados, Ventiladores, Deshumidificadores y Humidificadores en Clonación. Fuente: cuaderno de campo.",
+          "variables": [
+            {
+              "nombre": "Tipo de Equipo",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aire Acondicionado",
+                "Ventilador",
+                "Deshumidificador",
+                "Humidificador"
+              ],
+              "descripcion": "Categoría de equipo de climatización intervenido",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la actividad de mantenimiento",
+              "orden": 2
+            },
+            {
+              "nombre": "Equipo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación/código del equipo",
+              "orden": 3
+            },
+            {
+              "nombre": "Estado",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Operativo",
+                "Fuera de Servicio",
+                "En Mantenimiento"
+              ],
+              "descripcion": "Estado operativo del equipo",
+              "orden": 4
+            },
+            {
+              "nombre": "Actividad Realizada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Descripción de la actividad de mantenimiento realizada",
+              "orden": 5
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Persona que realizó el mantenimiento (si distinto al responsable habitual)",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales; consignar nombre y motivo si el mantenimiento lo realizó alguien distinto al responsable habitual",
+              "orden": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Floración 1",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-016",
+          "nombre": "Labores Culturales",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0203",
+          "descripcion": "Labores culturales en sala de Floración 1.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la labor",
+              "orden": 1
+            },
+            {
+              "nombre": "N° Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Lote intervenido",
+              "orden": 2
+            },
+            {
+              "nombre": "Poda de Limpieza",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se realizó poda de limpieza",
+              "orden": 3
+            },
+            {
+              "nombre": "Poda de Formación",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se realizó poda de formación",
+              "orden": 4
+            },
+            {
+              "nombre": "Colocación de Trampa",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se colocó trampa fitosanitaria",
+              "orden": 5
+            },
+            {
+              "nombre": "Colocación de Red",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se colocó red de sostén",
+              "orden": 6
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Quién ejecuta la labor",
+              "orden": 7
+            },
+            {
+              "nombre": "Indicado por",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Quién indicó la labor",
+              "orden": 8
+            }
+          ]
+        },
+        {
+          "id": "SP-017",
+          "nombre": "Disposición Final",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-PL-01",
+          "descripcion": "Registro de disposición final de material vegetal descartado.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de disposición final",
+              "orden": 1
+            },
+            {
+              "nombre": "ID Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador del lote dispuesto",
+              "orden": 2
+            },
+            {
+              "nombre": "Encargado de Disposición Final",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable de la disposición",
+              "orden": 3
+            },
+            {
+              "nombre": "Destino",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Compost",
+                "Residuos Comunes",
+                "Otros"
+              ],
+              "descripcion": "Destino final del material",
+              "orden": 4
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales",
+              "orden": 5
+            }
+          ]
+        },
+        {
+          "id": "SP-018",
+          "nombre": "Registro de Escorrentía",
+          "orden": 3,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0104",
+          "descripcion": "Medición de escurrimiento y condiciones ambientales en Floración 1.",
+          "variables": [
+            {
+              "nombre": "Fecha Última Medición",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Fecha de la medición anterior",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha Actual",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la medición actual",
+              "orden": 2
+            },
+            {
+              "nombre": "ID Planta",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador de planta (PM.1 a PM.12)",
+              "orden": 3
+            },
+            {
+              "nombre": "ML Escurrimiento (1ra Medición)",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 2000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Mililitros de escurrimiento",
+              "orden": 4
+            },
+            {
+              "nombre": "pH Escurrimiento (1ra Medición)",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 14,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "pH del escurrimiento",
+              "orden": 5
+            },
+            {
+              "nombre": "EC Escurrimiento (1ra Medición)",
+              "tipo_dato": "numero",
+              "unidad": "mS/cm",
+              "rango_min": 0,
+              "rango_max": 10,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "EC del escurrimiento",
+              "orden": 6
+            },
+            {
+              "nombre": "ML Corrección",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 2000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Mililitros aplicados en corrección",
+              "orden": 7
+            },
+            {
+              "nombre": "pH Corrección",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 14,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "pH tras corrección",
+              "orden": 8
+            },
+            {
+              "nombre": "EC Corrección",
+              "tipo_dato": "numero",
+              "unidad": "mS/cm",
+              "rango_min": 0,
+              "rango_max": 10,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "EC tras corrección",
+              "orden": 9
+            },
+            {
+              "nombre": "pH Riego",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 14,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "pH de la solución de riego",
+              "orden": 10
+            },
+            {
+              "nombre": "EC Riego",
+              "tipo_dato": "numero",
+              "unidad": "mS/cm",
+              "rango_min": 0,
+              "rango_max": 10,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "EC de la solución de riego",
+              "orden": 11
+            },
+            {
+              "nombre": "Notas",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Observaciones de la medición",
+              "orden": 12
+            },
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 30,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de cultivo/almacenamiento",
+              "orden": 13
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 40,
+              "rango_max": 80,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 14
+            },
+            {
+              "nombre": "VPD",
+              "tipo_dato": "numero",
+              "unidad": "kPa",
+              "rango_min": 0.8,
+              "rango_max": 2.0,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Vapor Pressure Deficit (déficit de presión de vapor)",
+              "orden": 15
+            },
+            {
+              "nombre": "CO2",
+              "tipo_dato": "numero",
+              "unidad": "ppm",
+              "rango_min": 400,
+              "rango_max": 1500,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Concentración de CO2 ambiente",
+              "orden": 16
+            },
+            {
+              "nombre": "Ventilación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Baja",
+                "Media",
+                "Alta"
+              ],
+              "descripcion": "Nivel de ventilación aplicado en la sala",
+              "orden": 17
+            }
+          ]
+        },
+        {
+          "id": "SP-019",
+          "nombre": "Calibración de Riego",
+          "orden": 4,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-PL-02",
+          "descripcion": "Calibración de disparos de riego automático en Floración 1.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de calibración",
+              "orden": 1
+            },
+            {
+              "nombre": "PM N°",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador de planta/lote (PM N°1 a N°12)",
+              "orden": 2
+            },
+            {
+              "nombre": "Disparo N°",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+              ],
+              "descripcion": "Número de disparo de riego automático",
+              "orden": 3
+            },
+            {
+              "nombre": "Tiempo Disparo",
+              "tipo_dato": "numero",
+              "unidad": "min",
+              "rango_min": 0,
+              "rango_max": 60,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Duración del disparo",
+              "orden": 4
+            },
+            {
+              "nombre": "ml Aplicados",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 5000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Volumen aplicado",
+              "orden": 5
+            },
+            {
+              "nombre": "Tiempo de Testigo",
+              "tipo_dato": "numero",
+              "unidad": "min",
+              "rango_min": 0,
+              "rango_max": 60,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Minutos de testigo de riego automático",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas de calibración",
+              "orden": 7
+            }
+          ]
+        },
+        {
+          "id": "SP-020",
+          "nombre": "Mantenimiento de Equipos de Climatización y Ambiente",
+          "orden": 5,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Registro de mantenimiento de Aires Acondicionados, Ventiladores, Deshumidificadores y Humidificadores en Floración 1. Fuente: cuaderno de campo.",
+          "variables": [
+            {
+              "nombre": "Tipo de Equipo",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aire Acondicionado",
+                "Ventilador",
+                "Deshumidificador",
+                "Humidificador"
+              ],
+              "descripcion": "Categoría de equipo de climatización intervenido",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la actividad de mantenimiento",
+              "orden": 2
+            },
+            {
+              "nombre": "Equipo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación/código del equipo",
+              "orden": 3
+            },
+            {
+              "nombre": "Estado",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Operativo",
+                "Fuera de Servicio",
+                "En Mantenimiento"
+              ],
+              "descripcion": "Estado operativo del equipo",
+              "orden": 4
+            },
+            {
+              "nombre": "Actividad Realizada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Descripción de la actividad de mantenimiento realizada",
+              "orden": 5
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Persona que realizó el mantenimiento (si distinto al responsable habitual)",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales; consignar nombre y motivo si el mantenimiento lo realizó alguien distinto al responsable habitual",
+              "orden": 7
+            }
+          ]
+        },
+        {
+          "id": "SP-021",
+          "nombre": "Aplicación de Fitosanitarios",
+          "orden": 6,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0504",
+          "descripcion": "Aplicación de fitosanitarios en Floración 1.",
+          "variables": [
+            {
+              "nombre": "Fecha de Aplicación",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de aplicación del fitosanitario",
+              "orden": 1
+            },
+            {
+              "nombre": "ID Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Lote tratado",
+              "orden": 2
+            },
+            {
+              "nombre": "Ubicación Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Ubicación física del lote",
+              "orden": 3
+            },
+            {
+              "nombre": "Objetivo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Objetivo de la aplicación",
+              "orden": 4
+            },
+            {
+              "nombre": "Variedad",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Pete Hope",
+                "Otros"
+              ],
+              "descripcion": "Variedad tratada",
+              "orden": 5
+            },
+            {
+              "nombre": "Nombre Comercial Producto Aplicado",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Producto comercial",
+              "orden": 6
+            },
+            {
+              "nombre": "Ingrediente Activo Producto Aplicado",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Ingrediente activo",
+              "orden": 7
+            },
+            {
+              "nombre": "Dosis",
+              "tipo_dato": "numero",
+              "unidad": "ml/100L",
+              "rango_min": 0,
+              "rango_max": 1000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Dosis aplicada",
+              "orden": 8
+            },
+            {
+              "nombre": "Condiciones Ambientales",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Condiciones durante la aplicación",
+              "orden": 9
+            },
+            {
+              "nombre": "Equipo Utilizado para la Aplicación",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Equipo de aplicación",
+              "orden": 10
+            },
+            {
+              "nombre": "Carencia",
+              "tipo_dato": "numero",
+              "unidad": "días",
+              "rango_min": 0,
+              "rango_max": 90,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Días de carencia",
+              "orden": 11
+            },
+            {
+              "nombre": "Nombre del Operario",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Operario que aplica",
+              "orden": 12
+            },
+            {
+              "nombre": "Asesor que Recomendó la Aplicación",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Asesor técnico",
+              "orden": 13
+            }
+          ]
+        },
+        {
+          "id": "SP-022",
+          "nombre": "Condiciones Ambientales Etapa Vegetativa",
+          "orden": 7,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0105",
+          "descripcion": "No presente como planilla propia en los cuadernos de Floración 1/2; la Matriz Consolidada define el registro CM-RE-0105 'Condiciones Ambientales – Etapa Vegetativa' (G01, obligatorio). Se agrega por regla de climatización — gap identificado entre Matriz y cuadernos. Datos reales en hoja CM-RE-0105 incluyen Sistema (COCO/RDWC), ID Lote, Presencia de Insectos y Presencia de Hongos (booleanos) que deberían incorporarse.",
+          "variables": [
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 30,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de cultivo/almacenamiento",
+              "orden": 1
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 40,
+              "rango_max": 80,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 2
+            },
+            {
+              "nombre": "VPD",
+              "tipo_dato": "numero",
+              "unidad": "kPa",
+              "rango_min": 0.8,
+              "rango_max": 2.0,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Vapor Pressure Deficit (déficit de presión de vapor)",
+              "orden": 3
+            },
+            {
+              "nombre": "CO2",
+              "tipo_dato": "numero",
+              "unidad": "ppm",
+              "rango_min": 400,
+              "rango_max": 1500,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Concentración de CO2 ambiente",
+              "orden": 4
+            },
+            {
+              "nombre": "Ventilación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Baja",
+                "Media",
+                "Alta"
+              ],
+              "descripcion": "Nivel de ventilación aplicado en la sala",
+              "orden": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Floración 2",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-023",
+          "nombre": "Labores Culturales",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0203",
+          "descripcion": "Labores culturales en sala de Floración 2.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la labor",
+              "orden": 1
+            },
+            {
+              "nombre": "N° Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Lote intervenido",
+              "orden": 2
+            },
+            {
+              "nombre": "Poda de Limpieza",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se realizó poda de limpieza",
+              "orden": 3
+            },
+            {
+              "nombre": "Poda de Formación",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se realizó poda de formación",
+              "orden": 4
+            },
+            {
+              "nombre": "Colocación de Trampa",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se colocó trampa fitosanitaria",
+              "orden": 5
+            },
+            {
+              "nombre": "Colocación de Red",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se colocó red de sostén",
+              "orden": 6
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Quién ejecuta la labor",
+              "orden": 7
+            },
+            {
+              "nombre": "Indicado por",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Quién indicó la labor",
+              "orden": 8
+            }
+          ]
+        },
+        {
+          "id": "SP-024",
+          "nombre": "Disposición Final",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-PL-01",
+          "descripcion": "Registro de disposición final de material vegetal descartado.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de disposición final",
+              "orden": 1
+            },
+            {
+              "nombre": "ID Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador del lote dispuesto",
+              "orden": 2
+            },
+            {
+              "nombre": "Encargado de Disposición Final",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable de la disposición",
+              "orden": 3
+            },
+            {
+              "nombre": "Destino",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Compost",
+                "Residuos Comunes",
+                "Otros"
+              ],
+              "descripcion": "Destino final del material",
+              "orden": 4
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales",
+              "orden": 5
+            }
+          ]
+        },
+        {
+          "id": "SP-025",
+          "nombre": "Mantenimiento de Equipos de Climatización y Ambiente",
+          "orden": 3,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Registro de mantenimiento de Aires Acondicionados, Ventiladores, Deshumidificadores y Humidificadores en Floración 2. Fuente: cuaderno de campo.",
+          "variables": [
+            {
+              "nombre": "Tipo de Equipo",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aire Acondicionado",
+                "Ventilador",
+                "Deshumidificador",
+                "Humidificador"
+              ],
+              "descripcion": "Categoría de equipo de climatización intervenido",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la actividad de mantenimiento",
+              "orden": 2
+            },
+            {
+              "nombre": "Equipo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación/código del equipo",
+              "orden": 3
+            },
+            {
+              "nombre": "Estado",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Operativo",
+                "Fuera de Servicio",
+                "En Mantenimiento"
+              ],
+              "descripcion": "Estado operativo del equipo",
+              "orden": 4
+            },
+            {
+              "nombre": "Actividad Realizada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Descripción de la actividad de mantenimiento realizada",
+              "orden": 5
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Persona que realizó el mantenimiento (si distinto al responsable habitual)",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales; consignar nombre y motivo si el mantenimiento lo realizó alguien distinto al responsable habitual",
+              "orden": 7
+            }
+          ]
+        },
+        {
+          "id": "SP-026",
+          "nombre": "Aplicación de Fitosanitarios",
+          "orden": 4,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0504",
+          "descripcion": "Aplicación de fitosanitarios en Floración 2.",
+          "variables": [
+            {
+              "nombre": "Fecha de Aplicación",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de aplicación del fitosanitario",
+              "orden": 1
+            },
+            {
+              "nombre": "ID Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Lote tratado",
+              "orden": 2
+            },
+            {
+              "nombre": "Ubicación Lote",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Ubicación física del lote",
+              "orden": 3
+            },
+            {
+              "nombre": "Objetivo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Objetivo de la aplicación",
+              "orden": 4
+            },
+            {
+              "nombre": "Variedad",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Pete Hope",
+                "Otros"
+              ],
+              "descripcion": "Variedad tratada",
+              "orden": 5
+            },
+            {
+              "nombre": "Nombre Comercial Producto Aplicado",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Producto comercial",
+              "orden": 6
+            },
+            {
+              "nombre": "Ingrediente Activo Producto Aplicado",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Ingrediente activo",
+              "orden": 7
+            },
+            {
+              "nombre": "Dosis",
+              "tipo_dato": "numero",
+              "unidad": "ml/100L",
+              "rango_min": 0,
+              "rango_max": 1000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Dosis aplicada",
+              "orden": 8
+            },
+            {
+              "nombre": "Condiciones Ambientales",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Condiciones durante la aplicación",
+              "orden": 9
+            },
+            {
+              "nombre": "Equipo Utilizado para la Aplicación",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Equipo de aplicación",
+              "orden": 10
+            },
+            {
+              "nombre": "Carencia",
+              "tipo_dato": "numero",
+              "unidad": "días",
+              "rango_min": 0,
+              "rango_max": 90,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Días de carencia",
+              "orden": 11
+            },
+            {
+              "nombre": "Nombre del Operario",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Operario que aplica",
+              "orden": 12
+            },
+            {
+              "nombre": "Asesor que Recomendó la Aplicación",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Asesor técnico",
+              "orden": 13
+            }
+          ]
+        },
+        {
+          "id": "SP-027",
+          "nombre": "Condiciones Ambientales de Floración 2",
+          "orden": 5,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0104",
+          "descripcion": "No presente como planilla propia en el cuaderno de Floración 2 (a diferencia de Floración 1, no incluye página de Registro de Escorrentía); la Matriz Consolidada exige CM-RE-0104 para toda sala de floración. Se agrega por regla de climatización — gap identificado entre Matriz y cuaderno.",
+          "variables": [
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 30,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de cultivo/almacenamiento",
+              "orden": 1
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 40,
+              "rango_max": 80,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 2
+            },
+            {
+              "nombre": "VPD",
+              "tipo_dato": "numero",
+              "unidad": "kPa",
+              "rango_min": 0.8,
+              "rango_max": 2.0,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Vapor Pressure Deficit (déficit de presión de vapor)",
+              "orden": 3
+            },
+            {
+              "nombre": "CO2",
+              "tipo_dato": "numero",
+              "unidad": "ppm",
+              "rango_min": 400,
+              "rango_max": 1500,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Concentración de CO2 ambiente",
+              "orden": 4
+            },
+            {
+              "nombre": "Ventilación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Baja",
+                "Media",
+                "Alta"
+              ],
+              "descripcion": "Nivel de ventilación aplicado en la sala",
+              "orden": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Monitoreo de Plagas y Enfermedades",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-028",
+          "nombre": "Monitoreo de Plagas",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0502",
+          "descripcion": "Monitoreo periódico de plagas por área de cultivo.",
+          "variables": [
+            {
+              "nombre": "Área",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Plantas Madres",
+                "Clonación",
+                "Vegetación",
+                "Floración",
+                "Secado",
+                "Almacenamiento"
+              ],
+              "descripcion": "Área monitoreada",
+              "orden": 1
+            },
+            {
+              "nombre": "Temporada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temporada de cultivo",
+              "orden": 2
+            },
+            {
+              "nombre": "Cultivo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación del cultivo",
+              "orden": 3
+            },
+            {
+              "nombre": "Encargado/a del Monitoreo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable del monitoreo",
+              "orden": 4
+            },
+            {
+              "nombre": "Variedad",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Pete Hope",
+                "Otros"
+              ],
+              "descripcion": "Variedad monitoreada",
+              "orden": 5
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha del monitoreo",
+              "orden": 6
+            },
+            {
+              "nombre": "Plaga Detectada",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Ácaros",
+                "Trips",
+                "Mosca Blanca",
+                "Pulgones",
+                "Mosquita de Mantillo",
+                "Cochinillas",
+                "Otras"
+              ],
+              "descripcion": "Tipo de plaga observada",
+              "orden": 7
+            },
+            {
+              "nombre": "Nivel de Infestación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Bajo",
+                "Medio",
+                "Alto"
+              ],
+              "descripcion": "Nivel de infestación observado",
+              "orden": 8
+            },
+            {
+              "nombre": "Check",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Casillero de verificación del monitoreo",
+              "orden": 9
+            }
+          ]
+        },
+        {
+          "id": "SP-029",
+          "nombre": "Monitoreo de Enfermedades",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0502",
+          "descripcion": "Monitoreo periódico de enfermedades fúngicas por área de cultivo. Nota: el cuaderno no lista explícitamente los nombres de enfermedades por columna (solo 'Nivel de Infestación' x5); la Matriz (hoja CM-RE-0502) confirma códigos B=Botritis/O=Oidio/M=Mildiu/F=Fusarium/P=Phytium usados como leyenda.",
+          "variables": [
+            {
+              "nombre": "Área",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Plantas Madres",
+                "Clonación",
+                "Vegetación",
+                "Floración",
+                "Secado",
+                "Almacenamiento"
+              ],
+              "descripcion": "Área monitoreada",
+              "orden": 1
+            },
+            {
+              "nombre": "Temporada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temporada de cultivo",
+              "orden": 2
+            },
+            {
+              "nombre": "Cultivo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación del cultivo",
+              "orden": 3
+            },
+            {
+              "nombre": "Encargado/a del Monitoreo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable del monitoreo",
+              "orden": 4
+            },
+            {
+              "nombre": "Variedad",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Pete Hope",
+                "Otros"
+              ],
+              "descripcion": "Variedad monitoreada",
+              "orden": 5
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha del monitoreo",
+              "orden": 6
+            },
+            {
+              "nombre": "Enfermedad Detectada",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Botritis",
+                "Oidio",
+                "Mildiu",
+                "Fusarium",
+                "Phytium",
+                "Otros"
+              ],
+              "descripcion": "Tipo de enfermedad observada",
+              "orden": 7
+            },
+            {
+              "nombre": "Nivel de Infestación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Bajo",
+                "Medio",
+                "Alto"
+              ],
+              "descripcion": "Nivel de afectación observado",
+              "orden": 8
+            },
+            {
+              "nombre": "Check",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Casillero de verificación del monitoreo",
+              "orden": 9
+            }
+          ]
+        },
+        {
+          "id": "SP-030",
+          "nombre": "Control de Roedores",
+          "orden": 3,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0501",
+          "descripcion": "Control periódico de roedores.",
+          "variables": [
+            {
+              "nombre": "Fecha de Control",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de control",
+              "orden": 1
+            },
+            {
+              "nombre": "Control",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Se realizó el control",
+              "orden": 2
+            },
+            {
+              "nombre": "Reposición",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Se repuso cebo/trampa",
+              "orden": 3
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable del control",
+              "orden": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Cosecha",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-031",
+          "nombre": "Certificado de Cosecha",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0601",
+          "descripcion": "Certificado y liberación formal de cosecha.",
+          "variables": [
+            {
+              "nombre": "Fecha de Emisión",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de emisión del certificado",
+              "orden": 1
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada cosechada",
+              "orden": 2
+            },
+            {
+              "nombre": "Fila",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fila cosechada",
+              "orden": 3
+            },
+            {
+              "nombre": "Fecha Transplante",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de trasplante del lote",
+              "orden": 4
+            },
+            {
+              "nombre": "Fecha Cosecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de cosecha",
+              "orden": 5
+            },
+            {
+              "nombre": "Plantas Cosechadas",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 500,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cantidad de plantas cosechadas",
+              "orden": 6
+            },
+            {
+              "nombre": "Estado del Producto",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Frescas",
+                "Otros"
+              ],
+              "descripcion": "Estado del producto cosechado",
+              "orden": 7
+            },
+            {
+              "nombre": "% Tricomas Ámbar - Liberación de Cosecha",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aprobado",
+                "Rechazado"
+              ],
+              "descripcion": "Resultado de liberación por % de tricomas ámbar",
+              "orden": 8
+            },
+            {
+              "nombre": "Condiciones Sanitarias",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Adecuadas",
+                "No Adecuadas"
+              ],
+              "descripcion": "Condición sanitaria del lote",
+              "orden": 9
+            },
+            {
+              "nombre": "Cumple BPA",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cumplimiento de Buenas Prácticas Agrícolas",
+              "orden": 10
+            },
+            {
+              "nombre": "Sala de Cultivo",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "SF1",
+                "SF2",
+                "Otros"
+              ],
+              "descripcion": "Sala de origen",
+              "orden": 11
+            },
+            {
+              "nombre": "Genética",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Pete Hope",
+                "Otros"
+              ],
+              "descripcion": "Genética/variedad cosechada",
+              "orden": 12
+            },
+            {
+              "nombre": "Instrumental",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Instrumental utilizado en la cosecha",
+              "orden": 13
+            },
+            {
+              "nombre": "Código de Trazabilidad",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Código de trazabilidad del lote",
+              "orden": 14
+            },
+            {
+              "nombre": "Liberación de Cosecha Aprobado Por",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable que aprueba la liberación",
+              "orden": 15
+            }
+          ]
+        },
+        {
+          "id": "SP-032",
+          "nombre": "Control Peso Húmedo en Cosecha",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0602",
+          "descripcion": "Control de peso húmedo por fila/cuadro durante la cosecha.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de pesaje",
+              "orden": 1
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada",
+              "orden": 2
+            },
+            {
+              "nombre": "Sala",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Sala de cultivo",
+              "orden": 3
+            },
+            {
+              "nombre": "N° de Fila",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 1,
+              "rango_max": 50,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Número de fila",
+              "orden": 4
+            },
+            {
+              "nombre": "N° de Cuadro",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 1,
+              "rango_max": 50,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Número de cuadro",
+              "orden": 5
+            },
+            {
+              "nombre": "N° de Subcuadro",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "descripcion": "Subcuadro de pesaje",
+              "orden": 6
+            },
+            {
+              "nombre": "Tara del Subcuadro",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 50,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Tara del recipiente de subcuadro",
+              "orden": 7
+            },
+            {
+              "nombre": "Peso Húmedo",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 100,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Peso húmedo registrado",
+              "orden": 8
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas de pesaje",
+              "orden": 9
+            }
+          ]
+        },
+        {
+          "id": "SP-033",
+          "nombre": "Resumen de Cosecha",
+          "orden": 3,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0603",
+          "descripcion": "Resumen consolidado de kilos por camada (húmedo/seco/trimeado).",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha del resumen",
+              "orden": 1
+            },
+            {
+              "nombre": "Sala",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Sala de cultivo",
+              "orden": 2
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada",
+              "orden": 3
+            },
+            {
+              "nombre": "Kilos Húmedos",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 5000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Total de kilos húmedos cosechados",
+              "orden": 4
+            },
+            {
+              "nombre": "Kilos Secos",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 5000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Total de kilos secos obtenidos",
+              "orden": 5
+            },
+            {
+              "nombre": "Kilos Trimeados",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 5000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Total de kilos trimeados obtenidos",
+              "orden": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Secado",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-034",
+          "nombre": "Certificado de Recepción en Secado",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0604",
+          "descripcion": "Certificado de recepción de material fresco en Sala de Secado.",
+          "variables": [
+            {
+              "nombre": "Fecha Ingreso",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de ingreso a secado",
+              "orden": 1
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada ingresada",
+              "orden": 2
+            },
+            {
+              "nombre": "Peso Húmedo de Ingreso",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 200,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Peso húmedo al ingreso",
+              "orden": 3
+            },
+            {
+              "nombre": "Cuadros de Secado",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cuadros de secado asignados",
+              "orden": 4
+            },
+            {
+              "nombre": "Número de Fila",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 1,
+              "rango_max": 50,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fila de origen",
+              "orden": 5
+            },
+            {
+              "nombre": "Condiciones de Entrega",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Óptimas",
+                "Adecuado",
+                "No Adecuado",
+                "Otros"
+              ],
+              "descripcion": "Condición de entrega del material",
+              "orden": 6
+            },
+            {
+              "nombre": "Ubicación",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Ubicación física (Sala de Secado)",
+              "orden": 7
+            }
+          ]
+        },
+        {
+          "id": "SP-035",
+          "nombre": "Control de Peso Seco en Secadero",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Control periódico de peso seco durante el secado.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de control",
+              "orden": 1
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada",
+              "orden": 2
+            },
+            {
+              "nombre": "Sala",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Sala",
+              "orden": 3
+            },
+            {
+              "nombre": "Número de Fila",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 1,
+              "rango_max": 50,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fila",
+              "orden": 4
+            },
+            {
+              "nombre": "Número de Cuadro",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 1,
+              "rango_max": 50,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cuadro de secado",
+              "orden": 5
+            },
+            {
+              "nombre": "Número de Subcuadro",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "descripcion": "Subcuadro (1 a 4)",
+              "orden": 6
+            },
+            {
+              "nombre": "Tara del Subcuadro",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 50,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Tara del recipiente",
+              "orden": 7
+            },
+            {
+              "nombre": "Peso Seco",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 100,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Peso seco registrado",
+              "orden": 8
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas",
+              "orden": 9
+            }
+          ]
+        },
+        {
+          "id": "SP-036",
+          "nombre": "Mantenimiento de Equipos de Climatización y Ambiente",
+          "orden": 3,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Registro de mantenimiento de Aires Acondicionados, Ventiladores, Deshumidificadores y Humidificadores en Secado. Fuente: cuaderno de campo.",
+          "variables": [
+            {
+              "nombre": "Tipo de Equipo",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aire Acondicionado",
+                "Ventilador",
+                "Deshumidificador",
+                "Humidificador"
+              ],
+              "descripcion": "Categoría de equipo de climatización intervenido",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la actividad de mantenimiento",
+              "orden": 2
+            },
+            {
+              "nombre": "Equipo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación/código del equipo",
+              "orden": 3
+            },
+            {
+              "nombre": "Estado",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Operativo",
+                "Fuera de Servicio",
+                "En Mantenimiento"
+              ],
+              "descripcion": "Estado operativo del equipo",
+              "orden": 4
+            },
+            {
+              "nombre": "Actividad Realizada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Descripción de la actividad de mantenimiento realizada",
+              "orden": 5
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Persona que realizó el mantenimiento (si distinto al responsable habitual)",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales; consignar nombre y motivo si el mantenimiento lo realizó alguien distinto al responsable habitual",
+              "orden": 7
+            }
+          ]
+        },
+        {
+          "id": "SP-037",
+          "nombre": "Condiciones Ambientales de Secado",
+          "orden": 4,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0107",
+          "descripcion": "No presente como planilla propia de lectura diaria en el cuaderno de Secado (solo hay mantenimiento de equipos); la Matriz exige CM-RE-0107 'Condiciones Ambientales – Área de Secado' (G01). Se agrega por regla de climatización — gap identificado entre Matriz y cuaderno.",
+          "variables": [
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 30,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de cultivo/almacenamiento",
+              "orden": 1
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 40,
+              "rango_max": 80,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 2
+            },
+            {
+              "nombre": "VPD",
+              "tipo_dato": "numero",
+              "unidad": "kPa",
+              "rango_min": 0.8,
+              "rango_max": 2.0,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Vapor Pressure Deficit (déficit de presión de vapor)",
+              "orden": 3
+            },
+            {
+              "nombre": "CO2",
+              "tipo_dato": "numero",
+              "unidad": "ppm",
+              "rango_min": 400,
+              "rango_max": 1500,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Concentración de CO2 ambiente",
+              "orden": 4
+            },
+            {
+              "nombre": "Ventilación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Baja",
+                "Media",
+                "Alta"
+              ],
+              "descripcion": "Nivel de ventilación aplicado en la sala",
+              "orden": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Trimeo",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-038",
+          "nombre": "Certificado de Recepción en Trimeo",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0605",
+          "descripcion": "Certificado de recepción de material seco en Sala de Trimeo. En datos reales, 'Peso Seco de salida de secado' presenta valores vacíos ('no medido') en ~70% de registros históricos — se recomienda mantenerlo opcional u obligar su carga en v3.0 para evitar el vacío observado.",
+          "variables": [
+            {
+              "nombre": "Fecha Ingreso",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de ingreso a trimeo",
+              "orden": 1
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada",
+              "orden": 2
+            },
+            {
+              "nombre": "Orden de Ingreso a Sala de Trimeo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Orden/líneas de origen de ingreso",
+              "orden": 3
+            },
+            {
+              "nombre": "Cuadro de Secado Origen",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cuadro de secado de origen",
+              "orden": 4
+            },
+            {
+              "nombre": "Condiciones de Entrega",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Adecuado",
+                "No Adecuado",
+                "Otros"
+              ],
+              "descripcion": "Condición de entrega del material",
+              "orden": 5
+            },
+            {
+              "nombre": "Peso Seco de Salida de Secado",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 100,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Peso seco al salir de secado",
+              "orden": 6
+            }
+          ]
+        },
+        {
+          "id": "SP-039",
+          "nombre": "Control de Peso Seco en Post-Trimeo",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Control de peso seco luego del proceso de trimeo.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de control",
+              "orden": 1
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada",
+              "orden": 2
+            },
+            {
+              "nombre": "Sala",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Sala",
+              "orden": 3
+            },
+            {
+              "nombre": "N° de Fila",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 1,
+              "rango_max": 50,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fila",
+              "orden": 4
+            },
+            {
+              "nombre": "N° de Cuadro de Secado",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 1,
+              "rango_max": 50,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cuadro de secado de origen",
+              "orden": 5
+            },
+            {
+              "nombre": "Condiciones",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Adecuado",
+                "No Adecuado",
+                "Otros"
+              ],
+              "descripcion": "Condición del material",
+              "orden": 6
+            },
+            {
+              "nombre": "N° de Bolsa",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador de bolsa de empaque",
+              "orden": 7
+            },
+            {
+              "nombre": "Peso Seco",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 100,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Peso seco post-trimeo",
+              "orden": 8
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas",
+              "orden": 9
+            }
+          ]
+        },
+        {
+          "id": "SP-040",
+          "nombre": "Mantenimiento de Equipos de Climatización y Ambiente",
+          "orden": 3,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Registro de mantenimiento de Aires Acondicionados, Ventiladores, Deshumidificadores y Humidificadores en Trimeo. Fuente: cuaderno de campo.",
+          "variables": [
+            {
+              "nombre": "Tipo de Equipo",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aire Acondicionado",
+                "Ventilador",
+                "Deshumidificador",
+                "Humidificador"
+              ],
+              "descripcion": "Categoría de equipo de climatización intervenido",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la actividad de mantenimiento",
+              "orden": 2
+            },
+            {
+              "nombre": "Equipo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación/código del equipo",
+              "orden": 3
+            },
+            {
+              "nombre": "Estado",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Operativo",
+                "Fuera de Servicio",
+                "En Mantenimiento"
+              ],
+              "descripcion": "Estado operativo del equipo",
+              "orden": 4
+            },
+            {
+              "nombre": "Actividad Realizada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Descripción de la actividad de mantenimiento realizada",
+              "orden": 5
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Persona que realizó el mantenimiento (si distinto al responsable habitual)",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales; consignar nombre y motivo si el mantenimiento lo realizó alguien distinto al responsable habitual",
+              "orden": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "Sales",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-041",
+          "nombre": "Solución Nutritiva",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0301",
+          "descripcion": "Preparación y aplicación de solución nutritiva por tanque/sala.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de preparación",
+              "orden": 1
+            },
+            {
+              "nombre": "Tanque Destino",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "T4 M",
+                "T6F2",
+                "T7F1",
+                "Otros"
+              ],
+              "descripcion": "Tanque y sala destino de la solución",
+              "orden": 2
+            },
+            {
+              "nombre": "Lts. de Solución",
+              "tipo_dato": "numero",
+              "unidad": "L",
+              "rango_min": 0,
+              "rango_max": 5000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Litros de solución preparada",
+              "orden": 3
+            },
+            {
+              "nombre": "EC",
+              "tipo_dato": "numero",
+              "unidad": "mS/cm",
+              "rango_min": 0,
+              "rango_max": 5,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Conductividad eléctrica de la solución",
+              "orden": 4
+            },
+            {
+              "nombre": "Core (ml)",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 20000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Cantidad de Core agregada",
+              "orden": 5
+            },
+            {
+              "nombre": "Bloom (ml)",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 20000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Cantidad de Bloom agregada",
+              "orden": 6
+            },
+            {
+              "nombre": "Balance / Grow (ml)",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 20000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Cantidad de Balance/Grow agregada",
+              "orden": 7
+            },
+            {
+              "nombre": "FADE (ml)",
+              "tipo_dato": "numero",
+              "unidad": "ml",
+              "rango_min": 0,
+              "rango_max": 20000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Cantidad de FADE agregada",
+              "orden": 8
+            },
+            {
+              "nombre": "Destino Solución",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Descripción del destino de la solución",
+              "orden": 9
+            },
+            {
+              "nombre": "Destino Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Camada destino",
+              "orden": 10
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable de la preparación",
+              "orden": 11
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas",
+              "orden": 12
+            }
+          ]
+        },
+        {
+          "id": "SP-042",
+          "nombre": "Insumos",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0304",
+          "descripcion": "Utilización de insumos esenciales e inventario de fertilizantes.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de utilización",
+              "orden": 1
+            },
+            {
+              "nombre": "Insumo Aplicado",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Balance",
+                "FADE",
+                "Tricoderma",
+                "Micorrizas",
+                "Bti",
+                "Azufre Agrícola",
+                "STACK",
+                "IPW",
+                "Bicarbonato de Na",
+                "Sal Común",
+                "H2O2",
+                "Ac. Paracético (OXIDAL)",
+                "H2O Destilada",
+                "Otros"
+              ],
+              "descripcion": "Insumo esencial utilizado",
+              "orden": 2
+            },
+            {
+              "nombre": "Cantidad",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 10000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cantidad utilizada",
+              "orden": 3
+            },
+            {
+              "nombre": "Unidad",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Kg",
+                "Gr",
+                "Lt",
+                "Ml"
+              ],
+              "descripcion": "Unidad de la cantidad",
+              "orden": 4
+            }
+          ]
+        },
+        {
+          "id": "SP-043",
+          "nombre": "Disoluciones",
+          "orden": 3,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Registro de disoluciones concentradas de fertilizantes.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de disolución",
+              "orden": 1
+            },
+            {
+              "nombre": "Tanque Destino",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Tanque destino",
+              "orden": 2
+            },
+            {
+              "nombre": "Core (Kg)",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 200,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Core en kilogramos",
+              "orden": 3
+            },
+            {
+              "nombre": "Bloom (Kg)",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 200,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Bloom en kilogramos",
+              "orden": 4
+            },
+            {
+              "nombre": "Grow (Kg)",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 200,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Grow en kilogramos",
+              "orden": 5
+            },
+            {
+              "nombre": "Balance (Kg)",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 200,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Balance en kilogramos",
+              "orden": 6
+            },
+            {
+              "nombre": "Core (Litros Concentrados)",
+              "tipo_dato": "numero",
+              "unidad": "L",
+              "rango_min": 0,
+              "rango_max": 200,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Core en litros concentrados",
+              "orden": 7
+            },
+            {
+              "nombre": "Grow (Litros Concentrados)",
+              "tipo_dato": "numero",
+              "unidad": "L",
+              "rango_min": 0,
+              "rango_max": 200,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Grow en litros concentrados",
+              "orden": 8
+            },
+            {
+              "nombre": "Bloom (Litros Concentrados)",
+              "tipo_dato": "numero",
+              "unidad": "L",
+              "rango_min": 0,
+              "rango_max": 200,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Bloom en litros concentrados",
+              "orden": 9
+            },
+            {
+              "nombre": "Verificación",
+              "tipo_dato": "booleano",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Verificación de la disolución realizada",
+              "orden": 10
+            }
+          ]
+        },
+        {
+          "id": "SP-044",
+          "nombre": "Calibración de Equipos",
+          "orden": 4,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0701",
+          "descripcion": "Calibración periódica de equipos de medición (balanza, pH, EC).",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de calibración",
+              "orden": 1
+            },
+            {
+              "nombre": "Equipo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Equipo calibrado (pHmetro, EC-metro, etc.)",
+              "orden": 2
+            },
+            {
+              "nombre": "Modelo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Modelo del equipo",
+              "orden": 3
+            },
+            {
+              "nombre": "Solución Patrón",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Solución patrón utilizada",
+              "orden": 4
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas de calibración",
+              "orden": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "nombre": "Empaquetado y Almacenamiento",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-045",
+          "nombre": "Empaquetado",
+          "orden": 1,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0607",
+          "descripcion": "Acondicionamiento final y empaquetado de producto terminado",
+          "variables": [
+            {
+              "nombre": "Fecha Ingreso",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de ingreso a empaquetado",
+              "orden": 1
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador de camada/lote",
+              "orden": 2
+            },
+            {
+              "nombre": "Kilos que se Entrega",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 5000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Kilos totales entregados a empaquetado",
+              "orden": 3
+            },
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 25,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de empaquetado",
+              "orden": 4
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 30,
+              "rango_max": 60,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 5
+            },
+            {
+              "nombre": "VPD",
+              "tipo_dato": "numero",
+              "unidad": "kPa",
+              "rango_min": 0.5,
+              "rango_max": 1.2,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Vapor Pressure Deficit",
+              "orden": 6
+            },
+            {
+              "nombre": "CO2",
+              "tipo_dato": "numero",
+              "unidad": "ppm",
+              "rango_min": 400,
+              "rango_max": 1000,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Nivel de CO2 en el ambiente",
+              "orden": 7
+            },
+            {
+              "nombre": "Ventilación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Baja",
+                "Media",
+                "Alta"
+              ],
+              "descripcion": "Nivel de ventilación",
+              "orden": 8
+            },
+            {
+              "nombre": "Medida de Empaquetado",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "40g",
+                "400g",
+                "1kg",
+                "+1kg bulk"
+              ],
+              "descripcion": "Formato/peso del empaque (CM-RE-0607)",
+              "orden": 9
+            },
+            {
+              "nombre": "Condiciones de Entrega",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "ACEPTADO",
+                "RECHAZADO"
+              ],
+              "descripcion": "Condición del material entregado (CM-RE-0608)",
+              "orden": 10
+            },
+            {
+              "nombre": "Ubicación",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Ubicación física en almacén",
+              "orden": 11
+            },
+            {
+              "nombre": "Responsable que Entrega",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable que entrega el lote a empaquetado",
+              "orden": 12
+            },
+            {
+              "nombre": "Responsable que Recepciona",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable que recibe el lote empaquetado",
+              "orden": 13
+            }
+          ]
+        },
+        {
+          "id": "SP-046",
+          "nombre": "Mantenimiento de Equipos de Climatización y Ambiente",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Registro de mantenimiento de Aires Acondicionados, Ventiladores, Deshumidificadores y Humidificadores en Empaquetado y Almacenamiento. Fuente: cuaderno de campo.",
+          "variables": [
+            {
+              "nombre": "Tipo de Equipo",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aire Acondicionado",
+                "Ventilador",
+                "Deshumidificador",
+                "Humidificador"
+              ],
+              "descripcion": "Categoría de equipo de climatización intervenido",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la actividad de mantenimiento",
+              "orden": 2
+            },
+            {
+              "nombre": "Equipo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación/código del equipo",
+              "orden": 3
+            },
+            {
+              "nombre": "Estado",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Operativo",
+                "Fuera de Servicio",
+                "En Mantenimiento"
+              ],
+              "descripcion": "Estado operativo del equipo",
+              "orden": 4
+            },
+            {
+              "nombre": "Actividad Realizada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Descripción de la actividad de mantenimiento realizada",
+              "orden": 5
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Persona que realizó el mantenimiento (si distinto al responsable habitual)",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales; consignar nombre y motivo si el mantenimiento lo realizó alguien distinto al responsable habitual",
+              "orden": 7
+            }
+          ]
+        },
+        {
+          "id": "SP-047",
+          "nombre": "Condiciones Ambientales de Almacenamiento",
+          "orden": 3,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0102",
+          "descripcion": "No presente como planilla propia de lectura diaria en el cuaderno; la Matriz exige CM-RE-0102 'Condiciones Ambientales – Almacenamiento' (G01, nombre de código coincide con el de Clonación en la Matriz, posible error de codificación a validar). Se agrega por regla de climatización — gap identificado entre Matriz y cuaderno.",
+          "variables": [
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 30,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de cultivo/almacenamiento",
+              "orden": 1
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 40,
+              "rango_max": 80,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 2
+            },
+            {
+              "nombre": "VPD",
+              "tipo_dato": "numero",
+              "unidad": "kPa",
+              "rango_min": 0.8,
+              "rango_max": 2.0,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Vapor Pressure Deficit (déficit de presión de vapor)",
+              "orden": 3
+            },
+            {
+              "nombre": "CO2",
+              "tipo_dato": "numero",
+              "unidad": "ppm",
+              "rango_min": 400,
+              "rango_max": 1500,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Concentración de CO2 ambiente",
+              "orden": 4
+            },
+            {
+              "nombre": "Ventilación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Baja",
+                "Media",
+                "Alta"
+              ],
+              "descripcion": "Nivel de ventilación aplicado en la sala",
+              "orden": 5
+            }
+          ]
+        },
+        {
+          "id": "SP-046",
+          "nombre": "Salida de Almacenamiento",
+          "orden": 2,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0609",
+          "descripcion": "Registro de salida de producto terminado del almacén (venta, investigación, donación, etc.)",
+          "variables": [
+            {
+              "nombre": "Fecha Salida",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de salida del almacén",
+              "orden": 1
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificador de camada/lote",
+              "orden": 2
+            },
+            {
+              "nombre": "Kilos que Salen",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 5000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Kilos que salen del almacén",
+              "orden": 3
+            },
+            {
+              "nombre": "Motivo de Salida",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Venta comercial",
+                "Investigación",
+                "Donación",
+                "Otros"
+              ],
+              "descripcion": "Motivo de salida del almacén. Si selecciona 'Otros', despliega campo de texto libre",
+              "orden": 4
+            },
+            {
+              "nombre": "Estado del Lote",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Adecuado",
+                "Rechazado"
+              ],
+              "descripcion": "Estado del lote al salir del almacén",
+              "orden": 5
+            },
+            {
+              "nombre": "Destino",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Nacional",
+                "Internacional"
+              ],
+              "descripcion": "Destino del envío",
+              "orden": 6
+            },
+            {
+              "nombre": "Tipo de Transporte",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Automóvil",
+                "Avión",
+                "Camioneta"
+              ],
+              "descripcion": "Tipo de transporte utilizado",
+              "orden": 7
+            },
+            {
+              "nombre": "Presentación de Producto",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "40g",
+                "400g",
+                "1kg",
+                "+1kg bulk"
+              ],
+              "descripcion": "Presentación/formato del producto que sale",
+              "orden": 8
+            },
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 25,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de almacenamiento",
+              "orden": 9
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 30,
+              "rango_max": 60,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 10
+            },
+            {
+              "nombre": "Responsable que Entrega",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable que entrega desde almacén",
+              "orden": 11
+            },
+            {
+              "nombre": "Responsable que Recepciona",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Responsable que recibe en destino",
+              "orden": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "nombre": "Cuarentena",
+      "tipo": "productivo",
+      "subprocesos": [
+        {
+          "id": "SP-048",
+          "nombre": "Ingreso a Cuarentena",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0606",
+          "descripcion": "Ingreso formal de lotes a Cuarentena.",
+          "variables": [
+            {
+              "nombre": "Fecha Ingreso",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de ingreso a cuarentena",
+              "orden": 1
+            },
+            {
+              "nombre": "Camada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Camada",
+              "orden": 2
+            },
+            {
+              "nombre": "Cuadro de Secado de Origen",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cuadro de secado de origen",
+              "orden": 3
+            },
+            {
+              "nombre": "Condiciones de Entrega",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Adecuado",
+                "No Adecuado",
+                "Otros"
+              ],
+              "descripcion": "Condición del material entregado",
+              "orden": 4
+            },
+            {
+              "nombre": "Ubicación",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Ubicación física (Cuarentena)",
+              "orden": 5
+            },
+            {
+              "nombre": "Kg. Recibidos",
+              "tipo_dato": "numero",
+              "unidad": "kg",
+              "rango_min": 0,
+              "rango_max": 20000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Kilos recibidos en cuarentena",
+              "orden": 6
+            }
+          ]
+        },
+        {
+          "id": "SP-049",
+          "nombre": "Mantenimiento de Equipos de Climatización y Ambiente",
+          "orden": 2,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": null,
+          "descripcion": "Registro de mantenimiento de Aires Acondicionados, Ventiladores, Deshumidificadores y Humidificadores en Cuarentena. Fuente: cuaderno de campo.",
+          "variables": [
+            {
+              "nombre": "Tipo de Equipo",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aire Acondicionado",
+                "Ventilador",
+                "Deshumidificador",
+                "Humidificador"
+              ],
+              "descripcion": "Categoría de equipo de climatización intervenido",
+              "orden": 1
+            },
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de la actividad de mantenimiento",
+              "orden": 2
+            },
+            {
+              "nombre": "Equipo",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Identificación/código del equipo",
+              "orden": 3
+            },
+            {
+              "nombre": "Estado",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Operativo",
+                "Fuera de Servicio",
+                "En Mantenimiento"
+              ],
+              "descripcion": "Estado operativo del equipo",
+              "orden": 4
+            },
+            {
+              "nombre": "Actividad Realizada",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Descripción de la actividad de mantenimiento realizada",
+              "orden": 5
+            },
+            {
+              "nombre": "Responsable",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Persona que realizó el mantenimiento (si distinto al responsable habitual)",
+              "orden": 6
+            },
+            {
+              "nombre": "Observaciones",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Notas adicionales; consignar nombre y motivo si el mantenimiento lo realizó alguien distinto al responsable habitual",
+              "orden": 7
+            }
+          ]
+        },
+        {
+          "id": "SP-050",
+          "nombre": "Condiciones Ambientales de Cuarentena",
+          "orden": 3,
+          "requiere_climatizacion": true,
+          "cm_re_referencia": "CM-RE-0103",
+          "descripcion": "No presente como planilla propia de lectura diaria en el cuaderno; la Matriz exige CM-RE-0103 'Condiciones Ambientales – Cuarentena' (G01). Se agrega por regla de climatización — gap identificado entre Matriz y cuaderno.",
+          "variables": [
+            {
+              "nombre": "Temperatura Aire",
+              "tipo_dato": "numero",
+              "unidad": "°C",
+              "rango_min": 15,
+              "rango_max": 30,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Temperatura del ambiente de cultivo/almacenamiento",
+              "orden": 1
+            },
+            {
+              "nombre": "Humedad Relativa",
+              "tipo_dato": "numero",
+              "unidad": "%",
+              "rango_min": 40,
+              "rango_max": 80,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Humedad relativa del aire",
+              "orden": 2
+            },
+            {
+              "nombre": "VPD",
+              "tipo_dato": "numero",
+              "unidad": "kPa",
+              "rango_min": 0.8,
+              "rango_max": 2.0,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Vapor Pressure Deficit (déficit de presión de vapor)",
+              "orden": 3
+            },
+            {
+              "nombre": "CO2",
+              "tipo_dato": "numero",
+              "unidad": "ppm",
+              "rango_min": 400,
+              "rango_max": 1500,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Concentración de CO2 ambiente",
+              "orden": 4
+            },
+            {
+              "nombre": "Ventilación",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Baja",
+                "Media",
+                "Alta"
+              ],
+              "descripcion": "Nivel de ventilación aplicado en la sala",
+              "orden": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "nombre": "Certificado de Transporte",
+      "tipo": "administrativo",
+      "subprocesos": [
+        {
+          "id": "SP-051",
+          "nombre": "Certificado de Transporte",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0609",
+          "descripcion": "Certificado de transporte y trazabilidad de despachos.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha del transporte",
+              "orden": 1
+            },
+            {
+              "nombre": "Número de Transporte",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Número identificatorio del transporte",
+              "orden": 2
+            },
+            {
+              "nombre": "Código Comercial",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Código comercial del producto",
+              "orden": 3
+            },
+            {
+              "nombre": "Presentación del Producto",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Presentación/formato del producto",
+              "orden": 4
+            },
+            {
+              "nombre": "Cantidad Despachada",
+              "tipo_dato": "numero",
+              "unidad": null,
+              "rango_min": 0,
+              "rango_max": 100000,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Cantidad despachada",
+              "orden": 5
+            },
+            {
+              "nombre": "Destino (Nac/Inter)",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Nacional",
+                "Internacional"
+              ],
+              "descripcion": "Alcance del destino",
+              "orden": 6
+            },
+            {
+              "nombre": "Destino",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Destino específico",
+              "orden": 7
+            },
+            {
+              "nombre": "Dirección de Entrega",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Dirección de entrega",
+              "orden": 8
+            },
+            {
+              "nombre": "Remito",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Número de remito",
+              "orden": 9
+            },
+            {
+              "nombre": "Datos Transportista",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Datos del transportista",
+              "orden": 10
+            },
+            {
+              "nombre": "Tipo de Transporte",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Terrestre",
+                "Aéreo",
+                "Marítimo",
+                "Otros"
+              ],
+              "descripcion": "Tipo de transporte utilizado",
+              "orden": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "nombre": "Certificado Salida Almacenamiento",
+      "tipo": "administrativo",
+      "subprocesos": [
+        {
+          "id": "SP-052",
+          "nombre": "Certificado Salida Almacenamiento",
+          "orden": 1,
+          "requiere_climatizacion": false,
+          "cm_re_referencia": "CM-RE-0608",
+          "descripcion": "Certificado de salida de producto desde almacenamiento.",
+          "variables": [
+            {
+              "nombre": "Fecha",
+              "tipo_dato": "fecha",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Fecha de salida",
+              "orden": 1
+            },
+            {
+              "nombre": "Código Trazabilidad Interna",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Código de trazabilidad interno",
+              "orden": 2
+            },
+            {
+              "nombre": "Código Comercial",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Código comercial",
+              "orden": 3
+            },
+            {
+              "nombre": "Motivo de la Salida",
+              "tipo_dato": "seleccion_condicional",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Venta",
+                "Traslado",
+                "Destrucción",
+                "Muestra",
+                "Otros"
+              ],
+              "descripcion": "Motivo de la salida del almacenamiento",
+              "orden": 4
+            },
+            {
+              "nombre": "Estado del Lote",
+              "tipo_dato": "seleccion",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": [
+                "Aprobado",
+                "Rechazado",
+                "Cuarentena"
+              ],
+              "descripcion": "Estado del lote al momento de la salida",
+              "orden": 5
+            },
+            {
+              "nombre": "N° de Pedido",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": false,
+              "opciones": null,
+              "descripcion": "Número de pedido asociado",
+              "orden": 6
+            },
+            {
+              "nombre": "Destino",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Destino de la salida",
+              "orden": 7
+            },
+            {
+              "nombre": "Medio de Transporte",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Medio de transporte utilizado",
+              "orden": 8
+            },
+            {
+              "nombre": "Remito",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Número de remito",
+              "orden": 9
+            },
+            {
+              "nombre": "Director/a Técnico/a",
+              "tipo_dato": "texto",
+              "unidad": null,
+              "rango_min": null,
+              "rango_max": null,
+              "obligatorio": true,
+              "opciones": null,
+              "descripcion": "Firma/nombre del Director Técnico responsable",
+              "orden": 10
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "validacion": {
+    "total_procesos": 13,
+    "total_subprocesos": 52,
+    "total_variables": 394,
+    "notas": "Estructura primaria (Proceso/Subproceso) derivada de los 13 Cuadernos de Campo vigentes en 'CUADERNOS DE CAMPO CORREGIDOS/Cuadernos Corregidos/'. Enriquecida y validada contra la Matriz Consolidada v2 'VALIDA PARA SOFTWARE' (CM-RE-1010, 81 registros / 10 grupos), la cual NO es una tabla de definicion de esquema sino un workbook con datos operativos reales ya cargados (fechas, pesos, responsables) — el esquema de variables fue inferido de sus encabezados de columna y valores observados. Se agregaron 6 subprocesos de 'Condiciones Ambientales' (Clonacion, Floracion 1 - Etapa Vegetativa, Floracion 2, Secado, Almacenamiento, Cuarentena) que la Matriz exige como registros G01 obligatorios (CM-RE-0101 a CM-RE-0107) pero que no tienen pagina propia de lectura diaria en el cuaderno de campo correspondiente — ver 'Conflictos' en el resumen."
+  }
+}
