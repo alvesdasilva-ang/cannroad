@@ -1,5 +1,12 @@
-import pg from 'pg';
-const { Pool } = pg;
+import pkg from 'pg';
+const { Pool } = pkg;
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false // Necesario para validar el certificado SSL de Supabase en contenedores
+  }
+});
 
 const pool = new Pool({
     host: process.env.DB_HOST || 'db.vhrxveogtlmoqivtnbln.supabase.co',
