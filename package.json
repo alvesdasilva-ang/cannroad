@@ -1,4 +1,7 @@
 {
+  "scripts": {
+  "start": "node index.js"
+}
   "name": "cannroad-frontend",
   "private": true,
   "version": "3.0.0",
