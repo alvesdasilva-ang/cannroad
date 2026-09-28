@@ -1,13 +1,12 @@
-{
-  "scripts": {
-  "start": "node index.js"
+
 }
   "name": "cannroad-backend",
   "version": "1.0.0",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
-    "dev": "node src/server.js"
+    "dev": "node src/server.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "@fastify/cors": "^11.3.0",
