@@ -88,32 +88,22 @@ fastify.get('/health', async (request, reply) => {
 
 const start = async () => {
     try {
-        // Esperar a que PostgreSQL esté listo
-        let dbReady = false;
-        let attempts = 0;
-        while (!dbReady && attempts < 30) {
-            try {
-                await pool.query('SELECT NOW()');
-                dbReady = true;
-            } catch (err) {
-                attempts++;
-                console.log(`Esperando a PostgreSQL... (${attempts}/30)`);
-                await new Promise(resolve => setTimeout(resolve, 1000));
-            }
-        }
-
-        if (!dbReady) {
-            throw new Error('PostgreSQL no está disponible después de 30 segundos');
-        }
-
-        console.log('✓ Conectado a PostgreSQL');
-
+        // Iniciar el servidor web de inmediato para cumplir con los tiempos de Railway
         await fastify.listen({
             port: process.env.PORT || 3000,
             host: '0.0.0.0'
         });
 
-        console.log(`✓ Servidor corriendo en http://localhost:${process.env.PORT || 3000}`);
+        console.log(`✓ Servidor corriendo en el puerto ${process.env.PORT || 3000}`);
+
+        // Opcional: Probar la conexión a la base de datos en segundo plano sin tumbar la app
+        try {
+            const result = await pool.query('SELECT NOW()');
+            console.log('✓ Conectado a PostgreSQL en:', result.rows[0].now);
+        } catch (dbErr) {
+            console.warn('⚠ Advertencia: No se pudo conectar a la base de datos al iniciar, pero el servidor sigue activo:', dbErr.message);
+        }
+
     } catch (err) {
         fastify.log.error(err);
         process.exit(1);
