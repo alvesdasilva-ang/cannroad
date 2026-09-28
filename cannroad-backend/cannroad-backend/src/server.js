@@ -96,12 +96,18 @@ const start = async () => {
 
         console.log(`✓ Servidor corriendo en el puerto ${process.env.PORT || 3000}`);
 
-        // Opcional: Probar la conexión a la base de datos en segundo plano sin tumbar la app
+        // Probar la conexión a la base de datos en segundo plano e imprimir el error detallado si falla
         try {
             const result = await pool.query('SELECT NOW()');
             console.log('✓ Conectado a PostgreSQL en:', result.rows[0].now);
         } catch (dbErr) {
-            console.warn('⚠ Advertencia: No se pudo conectar a la base de datos al iniciar, pero el servidor sigue activo:', dbErr.message);
+            console.error('====================================================');
+            console.error('❌ ERROR DETALLADO DE CONEXIÓN A SUPABASE/POSTGRESQL:');
+            console.error('Mensaje:', dbErr.message);
+            console.error('Código:', dbErr.code);
+            console.error('Detalle:', dbErr.detail);
+            console.error('Stack:', dbErr.stack);
+            console.error('====================================================');
         }
 
     } catch (err) {
