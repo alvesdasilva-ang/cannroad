@@ -25,13 +25,13 @@ services:
     container_name: cannroad-api
     environment:
       NODE_ENV: production
-      DB_HOST: postgres
+      DB_HOST: db.vhrxveogtlmoqivtnbln.supabase.co
       DB_PORT: 5432
-      DB_USER: cannroad_user
-      DB_PASSWORD: cannroad_pass
-      DB_NAME: cannroad_db
+      DB_USER: postgres
+      DB_PASSWORD: 2109ISA210925!
+      DB_NAME: postgres
       JWT_SECRET: your_jwt_secret_change_in_production_12345
-      CORS_ORIGIN: "*"
+      CORS_ORIGIN: "https://alvesdasilva-ang.github.io"
     ports:
       - "3000:3000"
     depends_on:
