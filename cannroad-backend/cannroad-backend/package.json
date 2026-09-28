@@ -1,4 +1,7 @@
 {
+  "scripts": {
+  "start": "node index.js"
+}
   "name": "cannroad-backend",
   "version": "1.0.0",
   "type": "module",
