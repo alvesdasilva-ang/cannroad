@@ -211,4 +211,19 @@ export async function registrarRutasSubprocesos(fastify) {
                     return reply.status(201).send({
                         status: 'ok',
                         message: 'Registro creado exitosamente',
-                        data: { id: registroId, codigo_lote,
+                        data: { id: registroId, codigo_lote, hash_integridad: hashIntegridad }
+                    });
+                } catch (err) {
+                    await client.query('ROLLBACK');
+                    throw err;
+                } finally {
+                    client.release();
+                }
+            } catch (err) {
+                if (err.statusCode) throw err;
+                fastify.log.error(err);
+                return reply.code(500).send({ statusCode: 500, error: 'Internal Server Error', message: 'Error al crear registro' });
+            }
+        }
+    );
+}
