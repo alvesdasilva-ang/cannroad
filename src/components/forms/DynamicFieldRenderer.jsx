@@ -66,6 +66,11 @@ export function DynamicFieldRenderer({
         if (isDependent && filteredOptions.length > 0) {
             return filteredOptions;
         }
+        // Caso 1: opciones es un array directo ["Optima", "Rechazada"]
+        if (Array.isArray(variable.opciones)) {
+            return variable.opciones;
+        }
+        // Caso 2: opciones es un objeto con .datos
         if (variable.opciones?.datos && !variable.opciones.depende_de) {
             return Array.isArray(variable.opciones.datos)
                 ? variable.opciones.datos
